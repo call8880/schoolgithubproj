@@ -31,20 +31,20 @@ public class crapsGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        btnroll = new javax.swing.JButton();
+        lbldie2 = new javax.swing.JLabel();
         lbldie = new javax.swing.JLabel();
-        lbldie1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Roll Die");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnroll.setText("Roll Die");
+        btnroll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnrollActionPerformed(evt);
             }
         });
 
-        lbldie.setBackground(new java.awt.Color(255, 255, 255));
+        lbldie2.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -52,11 +52,11 @@ public class crapsGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jButton1)
+                .addComponent(btnroll)
                 .addGap(18, 18, 18)
-                .addComponent(lbldie1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addComponent(lbldie, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(lbldie2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
         );
         layout.setVerticalGroup(
@@ -65,26 +65,26 @@ public class crapsGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(jButton1))
+                        .addComponent(btnroll))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbldie1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbldie, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lbldie, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbldie2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(179, Short.MAX_VALUE))
         );
 
-        lbldie.getAccessibleContext().setAccessibleName("lbldie");
-        lbldie.getAccessibleContext().setAccessibleDescription("");
+        lbldie2.getAccessibleContext().setAccessibleName("lbldie");
+        lbldie2.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnrollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrollActionPerformed
        int num = (int) (Math.random() * 6) + 1;
        URL file = getClass().getResource("D" + num + ".JPG");
        lbldie.setIcon(new ImageIcon(file));
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnrollActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,8 +122,8 @@ public class crapsGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnroll;
     private javax.swing.JLabel lbldie;
-    private javax.swing.JLabel lbldie1;
+    private javax.swing.JLabel lbldie2;
     // End of variables declaration//GEN-END:variables
 }
