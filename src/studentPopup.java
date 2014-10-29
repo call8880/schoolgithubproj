@@ -23,7 +23,7 @@ public class studentPopup extends javax.swing.JDialog {
     }
     
      private void btnokActionPerformed(java.awt.event.ActionEvent evt){
-         
+         this.dispose();
      }
 
     /**
@@ -39,7 +39,7 @@ public class studentPopup extends javax.swing.JDialog {
         txtname = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblmarks = new javax.swing.JTable();
         btnok = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -47,7 +47,7 @@ public class studentPopup extends javax.swing.JDialog {
 
         jLabel1.setText("Student Name");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblmarks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null}
             },
@@ -55,14 +55,14 @@ public class studentPopup extends javax.swing.JDialog {
                 "Mark 1 ", "Mark 2", "Mark 3"
             }
         ));
-        jTable1.setColumnSelectionAllowed(true);
-        jTable1.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(jTable1);
-        jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
+        tblmarks.setColumnSelectionAllowed(true);
+        tblmarks.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tblmarks);
+        tblmarks.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        if (tblmarks.getColumnModel().getColumnCount() > 0) {
+            tblmarks.getColumnModel().getColumn(0).setResizable(false);
+            tblmarks.getColumnModel().getColumn(1).setResizable(false);
+            tblmarks.getColumnModel().getColumn(2).setResizable(false);
         }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -122,7 +122,7 @@ public class studentPopup extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblmarks;
     private javax.swing.JTextField txtname;
     // End of variables declaration//GEN-END:variables
 }
