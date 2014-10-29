@@ -25,7 +25,10 @@ public class studentPopup extends javax.swing.JDialog {
     public int[] getMarks(){
         
         int marks[] = new int[3];
-        marks[0] = tblmarks.getValueAt(0, 0);
+        marks[0] = Integer.parseInt(tblmarks.getValueAt(0, 0).toString());
+        marks[1] = Integer.parseInt(tblmarks.getValueAt(0, 1).toString());
+        marks[2] = Integer.parseInt(tblmarks.getValueAt(0, 2).toString());
+        return marks;
     }
     
      private void btnokActionPerformed(java.awt.event.ActionEvent evt){
