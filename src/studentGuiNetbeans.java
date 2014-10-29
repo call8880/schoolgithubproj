@@ -57,23 +57,29 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
 
         lbltst3.setText("Test 3 ");
 
-        txttst1.setText("78");
         txttst1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txttst1ActionPerformed(evt);
             }
         });
 
-        txttst2.setText("77");
         txttst2.setToolTipText("");
-
-        txttst3.setText("55");
+        txttst2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttst2ActionPerformed(evt);
+            }
+        });
 
         lbllavg.setText("Average");
 
         lblavgshow.setText("filler");
 
         btnadd.setText("Add");
+        btnadd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddActionPerformed(evt);
+            }
+        });
 
         btnmod.setText("modify");
 
@@ -89,7 +95,7 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
 
         lblindex.setText("Current Index");
 
-        lblcountnum.setText("2");
+        lblcountnum.setText("0");
 
         lblindexnum.setText("0");
 
@@ -197,6 +203,17 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
     private void txttst1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttst1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txttst1ActionPerformed
+
+    private void txttst2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttst2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttst2ActionPerformed
+
+    private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
+           studentPopup spop = new studentPopup(this, true);
+           spop.setModal(true);
+           spop.setLocationRelativeTo(this);
+           spop.setVisible(true);
+    }//GEN-LAST:event_btnaddActionPerformed
 
     /**
      * @param args the command line arguments
