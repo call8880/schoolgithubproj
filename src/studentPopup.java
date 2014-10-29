@@ -17,6 +17,14 @@ public class studentPopup extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
     }
+    
+    public String getname(){
+        return txtname.getText();
+    }
+    
+     private void btnokActionPerformed(java.awt.event.ActionEvent evt){
+         
+     }
 
     /**
      * This method is called from within the constructor to initialize the form.
