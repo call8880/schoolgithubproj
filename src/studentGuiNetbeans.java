@@ -51,24 +51,30 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
 
         lblname.setText("Name");
 
+        txtname.setEditable(false);
+
         lbltst1.setText("Test 1");
 
         lbltst2.setText("Test 2");
 
         lbltst3.setText("Test 3 ");
 
+        txttst1.setEditable(false);
         txttst1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txttst1ActionPerformed(evt);
             }
         });
 
+        txttst2.setEditable(false);
         txttst2.setToolTipText("");
         txttst2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txttst2ActionPerformed(evt);
             }
         });
+
+        txttst3.setEditable(false);
 
         lbllavg.setText("Average");
 
@@ -213,6 +219,9 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
            spop.setModal(true);
            spop.setLocationRelativeTo(this);
            spop.setVisible(true);
+           //code wont run till popup is disposed
+           String name = spop.getName();
+           txtname.setText(name);
     }//GEN-LAST:event_btnaddActionPerformed
 
     /**

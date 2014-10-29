@@ -154,6 +154,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtname">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbltst1">
       <Properties>
@@ -171,12 +174,16 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txttst1">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttst1ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txttst2">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
@@ -184,6 +191,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txttst3">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbllavg">
       <Properties>
