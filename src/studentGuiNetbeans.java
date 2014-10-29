@@ -222,6 +222,10 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
            //code wont run till popup is disposed
            String name = spop.getName();
            txtname.setText(name);
+           int m[] = spop.getMarks();
+           txttst1.setText("" + m[0]);
+           txttst2.setText("" + m[1]);
+           txttst3.setText("" + m[2]);
     }//GEN-LAST:event_btnaddActionPerformed
 
     /**
