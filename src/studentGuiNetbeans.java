@@ -10,11 +10,15 @@
  */
 public class studentGuiNetbeans extends javax.swing.JFrame {
 
-    /**
-     * Creates new form studentGuiNetbeans
-     */
+    Student s[];
+    int size, currentStudent;
+    
+    
     public studentGuiNetbeans() {
         initComponents();
+        s = new Student[10];
+        size = 0;
+        currentStudent = -1;
     }
 
     /**
@@ -91,8 +95,18 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
         btn2back.setText("<<");
 
         btnback.setText("<");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
 
         btnfore.setText(">");
+        btnfore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnforeActionPerformed(evt);
+            }
+        });
 
         btnforwards.setText(">>");
 
@@ -231,6 +245,26 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
            txttst3.setText("" + m[2]);
     }//GEN-LAST:event_btnaddActionPerformed
 
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        if(currentStudent > 0){
+            currentStudent--;
+            showStudent();
+        }
+    }//GEN-LAST:event_btnbackActionPerformed
+
+    private void btnforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnforeActionPerformed
+        if(currentStudent < size - 1 && currentStudent > -1){
+            currentStudent++;
+            showStudent();
+        }
+    }//GEN-LAST:event_btnforeActionPerformed
+
+    public void showStudent(){
+        txtname.setText(s[currentStudent].getName());
+        txttst1.setText("" + s[currentStudent].getMark(1));
+        txt
+    }
+    
     /**
      * @param args the command line arguments
      */
