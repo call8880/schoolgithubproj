@@ -46,6 +46,7 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
         lblindex = new javax.swing.JLabel();
         lblcountnum = new javax.swing.JLabel();
         lblindexnum = new javax.swing.JLabel();
+        txtavg = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,8 +79,6 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
 
         lbllavg.setText("Average");
 
-        lblavgshow.setText("filler");
-
         btnadd.setText("Add");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,42 +104,19 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
 
         lblindexnum.setText("0");
 
+        txtavg.setEditable(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbltst3)
-                            .addComponent(lbltst2)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblname)
-                                    .addComponent(lbltst1))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(txttst2)
-                                            .addComponent(txttst1)
-                                            .addComponent(txttst3, javax.swing.GroupLayout.Alignment.LEADING))
-                                        .addGap(93, 93, 93)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnadd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(btnmod, javax.swing.GroupLayout.Alignment.TRAILING)))))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbllavg)
-                                .addGap(29, 29, 29)
-                                .addComponent(lblavgshow))
-                            .addGroup(layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(btn2back)
@@ -159,8 +135,34 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(lblindex)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lblindexnum)))))
-                        .addGap(0, 46, Short.MAX_VALUE)))
+                                        .addComponent(lblindexnum))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbllavg)
+                                .addGap(25, 25, 25)
+                                .addComponent(txtavg)
+                                .addGap(112, 112, 112)
+                                .addComponent(lblavgshow)))
+                        .addGap(46, 46, 46))
+                    .addComponent(lbltst3)
+                    .addComponent(lbltst2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblname)
+                            .addComponent(lbltst1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txttst2)
+                                    .addComponent(txttst1)
+                                    .addComponent(txttst3, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(93, 93, 93)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnadd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnmod, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGap(62, 62, 62))
         );
         layout.setVerticalGroup(
@@ -184,17 +186,18 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbltst3)
                     .addComponent(txttst3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
+                .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbllavg)
-                    .addComponent(lblavgshow))
+                    .addComponent(lblavgshow)
+                    .addComponent(txtavg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn2back)
                     .addComponent(btnback)
                     .addComponent(btnfore)
                     .addComponent(btnforwards))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblcount)
                     .addComponent(lblindex)
@@ -280,6 +283,7 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
     private javax.swing.JLabel lbltst1;
     private javax.swing.JLabel lbltst2;
     private javax.swing.JLabel lbltst3;
+    private javax.swing.JTextField txtavg;
     private javax.swing.JTextField txtname;
     private javax.swing.JTextField txttst1;
     private javax.swing.JTextField txttst2;
