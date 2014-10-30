@@ -48,6 +48,8 @@ public class Student {
         public int getScore(int i){
             return test[i-1];
         }
+        
+        
 	
 	public String validateData(){
 		
