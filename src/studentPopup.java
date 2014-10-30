@@ -1,3 +1,7 @@
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,22 +22,26 @@ public class studentPopup extends javax.swing.JDialog {
         initComponents();
     }
     
-    public String getname(){
+    public String getName(){
+       
         return txtname.getText();
     }
     
     public int[] getMarks(){
         
+        DefaultTableModel model = (DefaultTableModel)(tblmarks.getModel());
         int marks[] = new int[3];
-        marks[0] = Integer.parseInt(tblmarks.getValueAt(0, 0).toString());
-        marks[1] = Integer.parseInt(tblmarks.getValueAt(0, 1).toString());
-        marks[2] = Integer.parseInt(tblmarks.getValueAt(0, 2).toString());
+        try {
+            String name = txtname.getText();
+        marks[0] = Integer.parseInt(model.getValueAt(0, 0).toString());
+        marks[1] = Integer.parseInt(model.getValueAt(0, 1).toString());
+        marks[2] = Integer.parseInt(model.getValueAt(0, 2).toString());
+        //temp = new Student(name, marks);
+        }catch(Exception e ){JOptionPane.showMessageDialog(this, "Fill out all blanks");
+    }
         return marks;
     }
-    
-     private void btnokActionPerformed(java.awt.event.ActionEvent evt){
-         this.dispose();
-     }
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,11 +53,11 @@ public class studentPopup extends javax.swing.JDialog {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        txtname = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblmarks = new javax.swing.JTable();
         btnok = new javax.swing.JButton();
+        txtname = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -86,6 +94,11 @@ public class studentPopup extends javax.swing.JDialog {
         );
 
         btnok.setText("Okay");
+        btnok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnokActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,11 +110,13 @@ public class studentPopup extends javax.swing.JDialog {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(86, 86, 86)
-                        .addComponent(btnok)))
+                        .addComponent(btnok))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -110,8 +125,8 @@ public class studentPopup extends javax.swing.JDialog {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnok)
@@ -120,6 +135,10 @@ public class studentPopup extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnokActionPerformed
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_btnokActionPerformed
 
     /**
      * @param args the command line arguments
