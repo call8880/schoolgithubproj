@@ -34,8 +34,9 @@ public class Student {
 	all getter methods are not void
 	they are set to the type of data being returned*/
 
-	public void setName(String aname){
+	public void setName(String aname, int t[]){
 		name = aname;
+                test = t;
 	}
 	//because name is a string getName is a public string
 	public String getName(){

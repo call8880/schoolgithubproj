@@ -153,7 +153,15 @@ public class studentPopup extends javax.swing.JDialog {
         temp = new Student(name, marks);
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_btnokActionPerformed
-
+    
+    public void setForm(Student s){
+        DefaultTableModel model = (DefaultTableModel)(tblmarks.getModel());
+        txtname.setText(s.getName());
+        model.setValueAt(s.getMark(1), 0,0);
+        model.setValueAt(s.getMark(2), 0,1);
+        model.setValueAt(s.getMark(3), 0,2);
+        
+    }
     /**
      * @param args the command line arguments
      */

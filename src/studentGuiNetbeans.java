@@ -92,6 +92,11 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
         });
 
         btnmod.setText("modify");
+        btnmod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmodActionPerformed(evt);
+            }
+        });
 
         btn2back.setText("<<");
 
@@ -261,6 +266,15 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
             showStudent();
         }
     }//GEN-LAST:event_btnforeActionPerformed
+
+    private void btnmodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmodActionPerformed
+        studentPopup form = new studentPopup(this, true);
+        form.setForm(s[currentStudent]);
+        form.setModal(true);
+        form.setLocationRelativeTo(this);
+        form.setVisible(true);
+        
+    }//GEN-LAST:event_btnmodActionPerformed
 
     public void showStudent(){
         txtname.setText(s[currentStudent].getName());
