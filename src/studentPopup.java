@@ -147,7 +147,7 @@ public class studentPopup extends javax.swing.JDialog {
             marks[1] = Integer.parseInt(tblmarks.getValueAt(0,1).toString());
             marks[2] = Integer.parseInt(tblmarks.getValueAt(0,2).toString());
         }catch (Exception e){
-            JOptionPane.showMessageDialog(this, "Fill Out all Fields\n(Press <enter> on each mark");
+            JOptionPane.showMessageDialog(this, "Fill Out all Fields\n(Press <enter> on each mark)");
             return;
         }
         temp = new Student(name, marks);
