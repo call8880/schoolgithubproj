@@ -49,7 +49,14 @@ public class Student {
             return test[i-1];
         }
         
+        public int getMark(int i){
+            return test[i];
+        }
         
+        public int getAverage(){
+            int avg = test[0] + test[1] + test[2] / test.length;
+            return avg;
+        }
 	
 	public String validateData(){
 		

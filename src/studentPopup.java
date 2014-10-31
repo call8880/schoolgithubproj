@@ -17,6 +17,7 @@ public class studentPopup extends javax.swing.JDialog {
     /**
      * Creates new form studentPopup
      */
+    Student temp;
     public studentPopup(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -29,15 +30,16 @@ public class studentPopup extends javax.swing.JDialog {
     
     public int[] getMarks(){
         
-        DefaultTableModel model = (DefaultTableModel)(tblmarks.getModel());
+       
         int marks[] = new int[3];
         try {
             String name = txtname.getText();
-        marks[0] = Integer.parseInt(model.getValueAt(0, 0).toString());
-        marks[1] = Integer.parseInt(model.getValueAt(0, 1).toString());
-        marks[2] = Integer.parseInt(model.getValueAt(0, 2).toString());
-        //temp = new Student(name, marks);
-        }catch(Exception e ){JOptionPane.showMessageDialog(this, "Fill out all blanks");
+        marks[0] = Integer.parseInt(tblmarks.getValueAt(0, 0).toString());
+        marks[1] = Integer.parseInt(tblmarks.getValueAt(0, 1).toString());
+        marks[2] = Integer.parseInt(tblmarks.getValueAt(0, 2).toString());
+        temp = new Student(name, marks);
+        }catch(Exception e ){
+            JOptionPane.showMessageDialog(this, "Fill out all blanks");
     }
         return marks;
     }
@@ -137,6 +139,18 @@ public class studentPopup extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnokActionPerformed
+        
+        int marks [] = new int[3];
+        String name = txtname.getText();
+        try{
+            marks[0] = Integer.parseInt(tblmarks.getValueAt(0,0).toString());
+            marks[1] = Integer.parseInt(tblmarks.getValueAt(0,1).toString());
+            marks[2] = Integer.parseInt(tblmarks.getValueAt(0,2).toString());
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(this, "Fill Out all Fields\n(Press <enter> on each mark");
+            return;
+        }
+        temp = new Student(name, marks);
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_btnokActionPerformed
 

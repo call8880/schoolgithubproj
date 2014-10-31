@@ -12,6 +12,7 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
 
     Student s[];
     int size, currentStudent;
+
     
     
     public studentGuiNetbeans() {
@@ -243,6 +244,8 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
            txttst1.setText("" + m[0]);
            txttst2.setText("" + m[1]);
            txttst3.setText("" + m[2]);
+           
+           
     }//GEN-LAST:event_btnaddActionPerformed
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
@@ -262,7 +265,11 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
     public void showStudent(){
         txtname.setText(s[currentStudent].getName());
         txttst1.setText("" + s[currentStudent].getMark(1));
-        txt
+        txttst2.setText("" + s[currentStudent].getMark(2));
+        txttst3.setText("" + s[currentStudent].getMark(3));
+        txtavg.setText("" + s[currentStudent].getAverage());
+        lblcount.setText("" + size);
+        lblindex.setText("" + currentStudent);
     }
     
     /**
