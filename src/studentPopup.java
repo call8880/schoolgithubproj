@@ -162,6 +162,10 @@ public class studentPopup extends javax.swing.JDialog {
         model.setValueAt(s.getMark(3), 0,2);
         
     }
+    
+    public Student getStudent(){
+        return temp;
+    } 
     /**
      * @param args the command line arguments
      */

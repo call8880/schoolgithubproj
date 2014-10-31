@@ -51,11 +51,11 @@ public class Student {
         }
         
         public int getMark(int i){
-            return test[i];
+            return test[i-1];
         }
         
         public int getAverage(){
-            int avg = test[0] + test[1] + test[2] / test.length;
+            int avg = (test[0] + test[1] + test[2]) / 3;
             return avg;
         }
 	

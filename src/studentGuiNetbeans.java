@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -243,12 +246,16 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
            spop.setLocationRelativeTo(this);
            spop.setVisible(true);
            //code wont run till popup is disposed
-           String name = spop.getName();
-           txtname.setText(name); 
-           int m[] = spop.getMarks();
-           txttst1.setText("" + m[0]);
-           txttst2.setText("" + m[1]);
-           txttst3.setText("" + m[2]);
+           Student temp = spop.getStudent();
+           String em = temp.validateData();
+           if (em == null){
+               s[size] = temp;
+               currentStudent = size;
+               size++;
+               showStudent();
+           }
+           else JOptionPane.showMessageDialog(this, em);
+           
            
            
     }//GEN-LAST:event_btnaddActionPerformed
@@ -273,6 +280,8 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
         form.setModal(true);
         form.setLocationRelativeTo(this);
         form.setVisible(true);
+         s[currentStudent] = form.getStudent();
+         showStudent();
         
     }//GEN-LAST:event_btnmodActionPerformed
 
@@ -282,8 +291,8 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
         txttst2.setText("" + s[currentStudent].getMark(2));
         txttst3.setText("" + s[currentStudent].getMark(3));
         txtavg.setText("" + s[currentStudent].getAverage());
-        lblcount.setText("" + size);
-        lblindex.setText("" + currentStudent);
+        lblcountnum.setText("" + size);
+        lblindexnum.setText("" + currentStudent);
     }
     
     /**
