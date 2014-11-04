@@ -268,7 +268,7 @@ public class studentGuiNetbeans extends javax.swing.JFrame {
     }//GEN-LAST:event_btnbackActionPerformed
 
     private void btnforeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnforeActionPerformed
-        if(currentStudent < size - 1 && currentStudent > -1){
+        if(currentStudent < size 10 && currentStudent > -1){
             currentStudent++;
             showStudent();
         }
